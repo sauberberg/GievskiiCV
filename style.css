@@ -1,10 +1,52 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     text-align: center;
     background-color: #f4f4f4;
-    padding: 50px;
+    color: #333;
+}
+
+header {
+    margin: 50px 0;
 }
 
 h1 {
-    color: #333;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #007BFF;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1.2em;
+    margin: 10px 0;
 }
