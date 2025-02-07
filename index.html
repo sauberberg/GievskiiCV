@@ -6,8 +6,9 @@
     <title>Rui Couto Style CV</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
@@ -16,7 +17,7 @@
 
         header {
             background: url('header-image.jpg') no-repeat center center/cover;
-            height: 300px;
+            height: 400px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -28,7 +29,8 @@
 
         header h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 3.5em;
+            font-weight: bold;
         }
 
         header h2 {
@@ -43,22 +45,28 @@
             padding: 20px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 30px;
         }
 
         .card {
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            border: 1px solid #ddd;
+            position: relative;
         }
 
-        .about, .work-experience, .references {
-            grid-column: span 2;
-        }
-
-        .about h2, .work-experience h2, .references h2 {
+        .card h2 {
             margin-top: 0;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin: 0;
+            line-height: 1.5;
         }
 
         .profile-card {
@@ -73,18 +81,29 @@
             margin-bottom: 10px;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .profile-card h3 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            font-weight: bold;
         }
 
-        li {
-            margin-bottom: 10px;
+        .profile-card .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .profile-card .social-icons a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 1.2em;
         }
 
         .timeline {
-            border-left: 2px solid #ddd;
+            border-left: 2px solid #007BFF;
             padding-left: 20px;
+            margin-top: 20px;
         }
 
         .timeline .entry {
@@ -94,12 +113,21 @@
         .timeline .entry h3 {
             margin: 0;
             font-size: 1.2em;
+            color: #007BFF;
         }
 
         .timeline .entry time {
             display: block;
             font-size: 0.9em;
             color: #666;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            background: #f1f1f1;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
@@ -110,18 +138,26 @@
     </header>
 
     <div class="container">
+        <!-- About Me Section -->
         <div class="card about">
             <h2>About Me</h2>
             <p>Since a young age, I was curious about computers. This led me to software engineering. I specialize in backend development in the FinTech and InsurTech spaces.</p>
             <p><strong>Hobbies:</strong> Traveling, hiking, fitness, automation, and DIY.</p>
         </div>
 
+        <!-- Profile Card -->
         <div class="card profile-card">
             <img src="profile.jpg" alt="Profile Picture">
             <h3>Rui Couto</h3>
             <p>Senior Software Engineer</p>
+            <div class="social-icons">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Instagram</a>
+            </div>
         </div>
 
+        <!-- Work Experience Section -->
         <div class="card work-experience">
             <h2>Work Experience</h2>
             <div class="timeline">
@@ -138,10 +174,15 @@
             </div>
         </div>
 
+        <!-- References Section -->
         <div class="card references">
             <h2>References</h2>
             <p>"Rui is an inquisitive person with a strong problem-solving mindset and a passion for experimenting."</p>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Rui Couto. All rights reserved.</p>
+    </footer>
 </body>
 </html>
